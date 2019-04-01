@@ -40,14 +40,14 @@ $(".point-selector").on("click", function(e){
     activePoint.removeClass("active");
     point.addClass("active");
 
-    //.h1
-    $(".h1").addClass("hide");
+    //#header
+    $("#header").addClass("hide");
 
     //.selected
-    $(".wraper-2").addClass("selected");
+    $("#content").addClass("selected");
 
     //.activated
-    $(".wraper-2 a").removeClass("activated");
+    $("#content a").removeClass("activated");
     $(this).addClass("activated");
 
 });
