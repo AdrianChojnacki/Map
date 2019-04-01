@@ -108,31 +108,39 @@ a:hover {
     fill: #fff;
 }
 
-#map #map-tooltip {
+#map-tooltip {
     position: absolute;
     width: 210px;
     opacity: 0;
     z-index: 3;
 }
 
-#map #map-tooltip .title {
+#map-tooltip.active {
+    opacity: 1;
+}
+
+#map-tooltip .title {
     padding-bottom: 5px;
     font-size: 16px;
     font-family: "GothamMedium", sans-serif;
     letter-spacing: 2px;
 }
 
-#map #map-tooltip .desc {
+#map-tooltip .title.right {
+    text-align: right;
+}
+
+#map-tooltip .desc {
     padding-top: 5px;
     font-size: 16px;
     font-family: "GothamBookRegular", sans-serif;
 }
 
-#map #map-tooltip.active {
-    opacity: 1;
+#map-tooltip .desc.right {
+    text-align: right;
 }
 
-#map #map-tooltip .line {
+#map-tooltip .line {
     width: 100%;
     height: 2px;
     background: #fff;

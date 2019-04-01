@@ -2,10 +2,10 @@ $(".point-selector").on("click", function(e){
 
     e.preventDefault();
 
-    //point selector
     let pointSelector = $(this);
 
-    //point
+    //---------------------------------------------------------------------------------------------------------- POINT -
+
     let activePoint = $("#points .active");
     let pointId = pointSelector.attr("href");
     let point = $(pointId);
@@ -13,24 +13,33 @@ $(".point-selector").on("click", function(e){
     let pointHeight = Math.round(point[0].getBoundingClientRect().height);
     let pointWidth = Math.round(point[0].getBoundingClientRect().width);
 
-    //tooltip
+    //-------------------------------------------------------------------------------------------------------- TOOLTIP -
+
     let tooltip = $("#map-tooltip");
     let tooltipTitle = pointSelector.attr("data-title");
     let tooltipDescription = pointSelector.attr("data-description");
 
-    //tooltip add info data
+    //--------------------------------------------------------------------------------------------- ADD DATA -
+
     tooltip.find(".title").html(tooltipTitle);
     tooltip.find(".desc").html(tooltipDescription);
 
-    //tooltip calculate position
+    //--------------------------------------------------------------------------------------------- POSITION -
+
     let tooltipWidth = tooltip.width();
     let tooltipHeight = tooltip.height();
     let tooltipTop = pointPosition.top - tooltipHeight / 2 + pointHeight / 2;
     let tooltipLeft;
+    let title =  $("#map-tooltip .title");
+    let desc = $("#map-tooltip .desc");
     if (pointSelector.attr("data-position")==="right") {
-        tooltipLeft = pointPosition.left + pointWidth + 24;
+        tooltipLeft = pointPosition.left + pointWidth + 15;
+        title.addClass("right");
+        desc.addClass("right");
     } else {
-        tooltipLeft = pointPosition.left - tooltipWidth - 24;
+        tooltipLeft = pointPosition.left - tooltipWidth - 15;
+        title.removeClass("right");
+        desc.removeClass("right");
     }
 
     //move to position and show tooltip
