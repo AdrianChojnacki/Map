@@ -4,6 +4,12 @@ body {
     font-size: 14px;
 }
 
+.col {
+    padding: 0 22px;
+}
+
+/*-------------------------------------------------------------------------------------------------------- NAVIGATION */
+
 .logo {
     position: absolute;
     top: 44px;
@@ -25,10 +31,6 @@ body {
     text-decoration: none;
 }
 
-.col {
-    padding: 0 22px;
-}
-
 .nav-flex {
     display: flex;
     justify-content: space-between;
@@ -36,6 +38,74 @@ body {
 
 .nav-flex-item {
     flex: 0 0 auto;
+}
+
+/*--------------------------------------------------------------------------------------------------------------- MAP */
+
+a, .point, #map-tooltip, .h1 { /*------------------------------------------------------- ".h1" from CONTENT */
+    transition: all 700ms ease;
+}
+
+a {
+    color: #fff;
+}
+
+a:hover {
+    color: #e25a5f;
+}
+
+.map {
+    position: relative;
+}
+
+.map #points, .map img {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+.map img {
+    position: absolute;
+    z-index: 1;
+}
+
+.map .point {
+    fill: #8d080f;
+    stroke: transparent;
+}
+
+.map .point.active {
+    fill: #fff;
+}
+
+.map #map-tooltip {
+    position: absolute;
+    z-index: 3;
+    opacity: 0;
+}
+
+.map #map-tooltip.active {
+    opacity: 1;
+}
+
+.map #map-tooltip .line {
+    width: 100%;
+    height: 2px;
+    background: #fff;
+}
+
+/*----------------------------------------------------------------------------------------------------------- CONTENT */
+
+.h1 {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    z-index: 10;
+}
+
+.hide {
+    opacity: 0;
 }
 
 .wraper-2 {
@@ -66,54 +136,4 @@ body {
     margin: 0 22px;
     padding: 49px 82px 51px 50px;
     border: 3px solid #fff;
-}
-
-/*--------------------------------------------------------------------------------------------------------------- MAP */
-
-a, .point, #map-tooltip, .h1 { /*------------------------------------------------------------------ .h1 */
-    transition: all 700ms ease; }
-
-a {
-    color: #fff; }
-a:hover {
-    color: #e25a5f; }
-
-.map {
-    position: relative; }
-.map #points, .map img {
-    position: relative;
-    z-index: 2;
-    max-width: 100%;
-    width: 100%;
-    height: auto; }
-.map img {
-    position: absolute;
-    z-index: 1; }
-.map .point {
-    fill: #8d080f;
-    stroke: transparent; }
-.map .point.active {
-    fill: #fff; }
-.map #map-tooltip {
-    position: absolute;
-    z-index: 3;
-    opacity: 0; }
-.map #map-tooltip.active {
-    opacity: 1; }
-.map #map-tooltip .line {
-    width: 100%;
-    height: 2px;
-    background: #fff; }
-
-/*-------------------------------------------------------------------------------------------------------------- TEXT */
-
-.h1 {
-    position: absolute;
-    top: 200px;
-    left: 100px;
-    z-index: 10;
-}
-
-.hide {
-    opacity: 0;
 }

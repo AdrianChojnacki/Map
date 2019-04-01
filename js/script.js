@@ -1,6 +1,6 @@
 $(".point-selector").on("click", function(e){
 
-    e.preventDefault(); //blokuje standardowa zachowanie przycisku
+    e.preventDefault();
 
     //point selector
     let pointSelector = $(this);
