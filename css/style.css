@@ -140,8 +140,8 @@ a, .point, #map-tooltip, #header { /*-------------------------------------------
 
 #header {
     position: absolute;
-    top: 328px;
-    left: 132px;
+    top: 305px;
+    left: 125px;
     font-family: "GothamMedium", sans-serif;
     z-index: 10;
 }
@@ -166,9 +166,13 @@ a, .point, #map-tooltip, #header { /*-------------------------------------------
     z-index: 10;
 }
 
+#content .list, #content .description {
+    height: 231px;
+}
+
 #content .list {
     flex: 0 0 20%;
-    padding: 0 88px 0 0;
+    padding: 0 96px 0 0;
 }
 
 #content .list a {
@@ -193,7 +197,7 @@ a, .point, #map-tooltip, #header { /*-------------------------------------------
 }
 
 #content .description h2 {
-    margin-bottom: 36px;
+    margin-bottom: 24px;
     font-size: 20px;
 }
 
