@@ -8,6 +8,15 @@ body {
     padding: 0 22px;
 }
 
+a {
+    color: #fff;
+}
+
+a:hover {
+    color: #e25a5f;
+    text-decoration: none;
+}
+
 /*-------------------------------------------------------------------------------------------------------- NAVIGATION */
 
 .logo {
@@ -26,11 +35,6 @@ body {
     z-index: 10;
 }
 
-.wraper-1 a {
-    color: #fff;
-    text-decoration: none;
-}
-
 .nav-flex {
     display: flex;
     justify-content: space-between;
@@ -42,32 +46,24 @@ body {
 
 /*--------------------------------------------------------------------------------------------------------------- MAP */
 
-a, .point, #map-tooltip, .h1 { /*------------------------------------------------------- ".h1" from CONTENT */
-    transition: all 700ms ease;
-}
-
-a {
-    color: #fff;
-}
-
-a:hover {
-    color: #e25a5f;
-}
-
 .map {
     position: relative;
 }
 
-.map #points, .map img {
-    position: relative;
-    z-index: 2;
-    max-width: 100%;
+.map img, .map #points {
     width: 100%;
     height: auto;
+    max-width: 100%;
 }
+
 .map img {
     position: absolute;
     z-index: 1;
+}
+
+.map #points {
+    position: relative;
+    z-index: 2;
 }
 
 .map .point {
@@ -93,6 +89,10 @@ a:hover {
     width: 100%;
     height: 2px;
     background: #fff;
+}
+
+a, .point, #map-tooltip, .h1 { /*------------------------------------------------------- ".h1" from CONTENT */
+    transition: all 700ms ease;
 }
 
 /*----------------------------------------------------------------------------------------------------------- CONTENT */
