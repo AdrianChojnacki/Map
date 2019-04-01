@@ -1,3 +1,23 @@
+@font-face {
+    font-family: "GothamBold";
+    src: url("../fonts/Gotham-Bold.otf");
+}
+
+@font-face {
+    font-family: "GothamBookRegular";
+    src: url("../fonts/GothamBookRegular.otf");
+}
+
+@font-face {
+    font-family: "GothamMedium";
+    src: url("../fonts/GothamMedium.otf");
+}
+
+@font-face {
+    font-family: "NimbusSansDOT-Bold";
+    src: url("../fonts/NimbusSansDOT-Bold.otf");
+}
+
 body {
     color: #fff;
     background-color: #9d0a0f;
@@ -32,7 +52,12 @@ a:hover {
     width: 100%;
     margin: 0;
     padding: 0 110px;
+    font-family: "GothamBold", sans-serif;
     z-index: 10;
+}
+
+.wraper-1 p {
+    font-family: "GothamBookRegular", sans-serif;
 }
 
 .nav-flex {
@@ -92,10 +117,14 @@ a:hover {
 }
 
 a, .point, #map-tooltip, .h1 { /*------------------------------------------------------- ".h1" from CONTENT */
-    transition: all 700ms ease;
+    transition: all 300ms ease;
 }
 
 /*----------------------------------------------------------------------------------------------------------- CONTENT */
+
+.h1, .wraper-2 {
+    font-family: "GothamMedium", sans-serif;
+}
 
 .h1 {
     position: absolute;
@@ -136,4 +165,8 @@ a, .point, #map-tooltip, .h1 { /*-----------------------------------------------
     margin: 0 22px;
     padding: 49px 82px 51px 50px;
     border: 3px solid #fff;
+}
+
+.text-description p {
+    font-family: "GothamBookRegular", sans-serif;
 }
