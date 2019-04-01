@@ -26,8 +26,9 @@ $(".point-selector").on("click", function(e){
     let tooltipWidth = tooltip.width();
     let tooltipHeight = tooltip.height();
     let tooltipTop = pointPosition.top - tooltipHeight / 2 + pointHeight / 2;
+    let tooltipLeft;
     if (pointSelector.attr("data-position")==="right") {
-        var tooltipLeft = pointPosition.left + pointWidth + 24;
+        tooltipLeft = pointPosition.left + pointWidth + 24;
     } else {
         tooltipLeft = pointPosition.left - tooltipWidth - 24;
     }
