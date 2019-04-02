@@ -85,17 +85,19 @@ a:hover {
 
 #map img, #map #points {
     width: 100%;
-    height: auto;
+    height: 100%;
     max-width: 100%;
+    max-height: 100%;
+    margin: auto;
 }
 
 #map img {
-    position: absolute;
+    position: fixed;
     z-index: 1;
 }
 
 #map #points {
-    position: relative;
+    position: fixed;
     z-index: 2;
 }
 
