@@ -1,76 +1,80 @@
-//---------------------------------------------------------------------------------------------------------- MOUSEOVER -
+$(document).ready(function(){
 
-$(".point-selector").on("mouseover", function(e){
+    //------------------------------------------------------------------------------------------------------ MOUSEOVER -
 
-    e.preventDefault();
+    $(".point-selector").on("mouseover", function(e){
 
-    let pointSelector = $(this);
+        e.preventDefault();
 
-    //------------------------------------------------------------------------------------------------ POINT -
+        let pointSelector = $(this);
 
-    let activePoint = $("#points .active");
-    let pointId = pointSelector.attr("href");
-    let point = $(pointId);
-    let pointPosition = point.position();
-    let pointHeight = Math.round(point[0].getBoundingClientRect().height);
-    let pointWidth = Math.round(point[0].getBoundingClientRect().width);
+        //-------------------------------------------------------------------------------------------- POINT -
 
-    //--------------------------------------------------------------------------------- SHOW POINT -
+        let activePoint = $("#points .active");
+        let pointId = pointSelector.attr("href");
+        let point = $(pointId);
+        let pointPosition = point.position();
+        let pointHeight = Math.round(point[0].getBoundingClientRect().height);
+        let pointWidth = Math.round(point[0].getBoundingClientRect().width);
 
-    activePoint.removeClass("active");
-    point.addClass("active");
+        //----------------------------------------------------------------------------- SHOW POINT -
 
-    //---------------------------------------------------------------------------------------------- TOOLTIP -
+        activePoint.removeClass("active");
+        point.addClass("active");
 
-    let tooltip = $("#tooltip");
-    let tooltipTitle = pointSelector.attr("data-title");
-    let tooltipPlace = pointSelector.attr("data-place");
+        //------------------------------------------------------------------------------------------ TOOLTIP -
 
-    //----------------------------------------------------------------------------------- ADD DATA -
+        let tooltip = $("#tooltip");
+        let tooltipTitle = pointSelector.attr("data-title");
+        let tooltipPlace = pointSelector.attr("data-place");
 
-    tooltip.find(".title").html(tooltipTitle);
-    tooltip.find(".place").html(tooltipPlace);
+        //------------------------------------------------------------------------------- ADD DATA -
 
-    //----------------------------------------------------------------------------------- POSITION -
+        tooltip.find(".title").html(tooltipTitle);
+        tooltip.find(".place").html(tooltipPlace);
 
-    let tooltipWidth = tooltip.width();
-    let tooltipHeight = tooltip.height();
-    let tooltipTop = pointPosition.top - tooltipHeight / 2 + pointHeight / 2;
-    let tooltipLeft;
-    let title =  $("#tooltip .title");
-    let place = $("#tooltip .place");
+        //------------------------------------------------------------------------------- POSITION -
 
-    if (pointSelector.attr("data-position")==="right") {
-        tooltipLeft = pointPosition.left + pointWidth + 15;
-        title.addClass("right");
-        place.addClass("right");
-    } else {
-        tooltipLeft = pointPosition.left - tooltipWidth - 15;
-        title.removeClass("right");
-        place.removeClass("right");
-    }
+        let tooltipWidth = tooltip.width();
+        let tooltipHeight = tooltip.height();
+        let tooltipTop = pointPosition.top - tooltipHeight / 2 + pointHeight / 2;
+        let tooltipLeft;
+        let title =  $("#tooltip .title");
+        let place = $("#tooltip .place");
 
-    //---------------------------------------------------------------------------------------- CSS -
+        if (pointSelector.attr("data-position")==="right") {
+            tooltipLeft = pointPosition.left + pointWidth + 15;
+            title.addClass("right");
+            place.addClass("right");
+        } else {
+            tooltipLeft = pointPosition.left - tooltipWidth - 15;
+            title.removeClass("right");
+            place.removeClass("right");
+        }
 
-    tooltip.css( {"top": tooltipTop, "left": tooltipLeft } );
-    tooltip.addClass("active");
+        //------------------------------------------------------------------------------------ CSS -
 
-    //---------------------------------------------------------------------------------------------- CONTENT -
+        tooltip.css( {"top": tooltipTop, "left": tooltipLeft } );
+        tooltip.addClass("active");
 
-    $("#header").addClass("hide");
-    $("#content").addClass("active");
-    $("#content .point-selector").removeClass("selected");
-    $(this).addClass("selected");
+        //------------------------------------------------------------------------------------------ CONTENT -
 
-});
+        $("#header").addClass("hide");
+        $("#content").addClass("active");
+        $("#content .point-selector").removeClass("selected");
+        $(this).addClass("selected");
 
-//--------------------------------------------------------------------------------------------------------- MOUSELEAVE -
+    });
 
-$("#list").on("mouseleave", function() {
+    //----------------------------------------------------------------------------------------------------- MOUSELEAVE -
 
-    $("#header").removeClass("hide");
-    $("#points .active").removeClass("active");
-    $("#tooltip").removeClass("active");
-    $("#content").removeClass("active");
+    $("#list").on("mouseleave", function() {
+
+        $("#header").removeClass("hide");
+        $("#points .active").removeClass("active");
+        $("#tooltip").removeClass("active");
+        $("#content").removeClass("active");
+
+    });
 
 });
