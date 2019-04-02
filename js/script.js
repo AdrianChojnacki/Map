@@ -1,4 +1,4 @@
-$(".point-selector").on("click", function(e){
+$(".point-selector").on("mouseover", function(e){
 
     e.preventDefault();
 
@@ -12,6 +12,11 @@ $(".point-selector").on("click", function(e){
     let pointPosition = point.position();
     let pointHeight = Math.round(point[0].getBoundingClientRect().height);
     let pointWidth = Math.round(point[0].getBoundingClientRect().width);
+
+    //------------------------------------------------------------------------------------------- SHOW POINT -
+
+    activePoint.removeClass("active");
+    point.addClass("active");
 
     //-------------------------------------------------------------------------------------------------------- TOOLTIP -
 
@@ -42,22 +47,30 @@ $(".point-selector").on("click", function(e){
         desc.removeClass("right");
     }
 
-    //move to position and show tooltip
+    //-------------------------------------------------------------------------------------------------- CSS -
+
     tooltip.css( {top: tooltipTop, left: tooltipLeft } );
     tooltip.addClass("active");
 
-    //show point
-    activePoint.removeClass("active");
-    point.addClass("active");
+    //-------------------------------------------------------------------------------------------------------- CONTENT -
 
-    //#header
     $("#header").addClass("hide");
 
-    //.selected
-    $("#content").addClass("selected");
+    $("#content").addClass("active");
 
-    //.activated
-    $("#content a").removeClass("activated");
-    $(this).addClass("activated");
+    $("#content a").removeClass("selected");
+    $(this).addClass("selected");
+
+});
+
+$(".list").on("mouseleave", function() {
+
+    $("#header").removeClass("hide");
+
+    $("#points .active").removeClass("active");
+
+    $("#map-tooltip").removeClass("active");
+
+    $("#content").removeClass("active");
 
 });

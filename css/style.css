@@ -194,11 +194,11 @@ a, .point, #map-tooltip, #header { /*-------------------------------------------
     line-height: 1.8;
 }
 
-#content.selected a {
+#content.active a {
     color: #5e0609;
 }
 
-#content.selected a.activated {
+#content.active a.selected {
     color: #fff;
 }
 
