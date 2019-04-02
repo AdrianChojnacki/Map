@@ -29,7 +29,7 @@ body {
 }
 
 .col {
-    padding: 0 22px;
+    padding: 0 1.3%;
 }
 
 a {
@@ -45,18 +45,18 @@ a:hover {
 
 #logo {
     position: absolute;
-    top: 44px;
-    left: 44px;
+    top: 4.75%;
+    left: 2.55%;
     z-index: 10;
 }
 
 #navigation {
     position: absolute;
-    top: 44px;
+    top: 4.75%;
     width: 100%;
     height: 44px;
     margin: 0;
-    padding: 0 110px;
+    padding: 0 6.4%;
     font-family: "GothamBookRegular", sans-serif;
     z-index: 10;
 }
@@ -116,27 +116,22 @@ a:hover {
 }
 
 #map-tooltip.active {
+    font-size: 16px;
     opacity: 1;
 }
 
 #map-tooltip .title {
     padding-bottom: 5px;
-    font-size: 16px;
     font-family: "GothamMedium", sans-serif;
     letter-spacing: 2px;
 }
 
-#map-tooltip .title.right {
-    text-align: right;
-}
-
 #map-tooltip .desc {
     padding-top: 5px;
-    font-size: 16px;
     font-family: "GothamBookRegular", sans-serif;
 }
 
-#map-tooltip .desc.right {
+#map-tooltip .title.right, #map-tooltip .desc.right {
     text-align: right;
 }
 
@@ -154,8 +149,8 @@ a, .point, #map-tooltip, #header { /*-------------------------------------------
 
 #header {
     position: absolute;
-    top: 305px;
-    left: 125px;
+    top: 33%;
+    left: 7.3%;
     font-family: "GothamMedium", sans-serif;
     z-index: 10;
 }
@@ -171,11 +166,11 @@ a, .point, #map-tooltip, #header { /*-------------------------------------------
 
 #content {
     position: absolute;
-    bottom: 88px;
+    bottom: 9.5%;
     width: 100%;
-    height: 231px;
+    height: 25%;
     margin: 0;
-    padding: 0 110px;
+    padding: 0 6.4%;
     font-family: "GothamBookRegular", sans-serif;
     z-index: 10;
 }
@@ -206,7 +201,8 @@ a, .point, #map-tooltip, #header { /*-------------------------------------------
 }
 
 #content .description {
-    padding: 47px 72px 53px 50px;
+    height: 100%;
+    padding: 47px 72px 51px 50px;
     border: 3px solid #fff;
 }
 
