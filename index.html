@@ -43,7 +43,7 @@
     <!---------------------------------------- MAP ---------------------------------------->
 
     <div id="map">
-        <img src="img/map.svg" alt="">
+        <img src="img/map.svg" alt="map">
         <?xml version="1.0" encoding="utf-8"?>
         <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
         <svg version="1.1" id="points" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -66,10 +66,10 @@
 
         <!-------------------- TOOLTIP -------------------->
 
-        <div id="map-tooltip">
+        <div id="tooltip">
             <div class="title"></div>
             <div class="line"></div>
-            <div class="desc"></div>
+            <div class="place"></div>
         </div>
 
     </div>
@@ -83,31 +83,31 @@
     <div id="content" class="container-fluid">
         <div class="row">
             <div class="col text-nowrap">
-                <div class="row">
-                    <div class="col-md-4 list">
-                        <a class="point-selector" href="#point-1" data-title="EBACE" data-description="Madrid (Spain)">EBACE</a>
-                        <a class="point-selector" href="#point-9" data-position="right" data-title="NBAA" data-description="Las Vegas (USA)">NBAA</a>
-                        <a class="point-selector" href="#point-3" data-title="Medica" data-description="London (UK)">Medica</a>
-                        <a class="point-selector" href="#point-4" data-title="Orgatec" data-description="Warsaw (Poland)">Orgatec</a>
-                        <a class="point-selector" href="#point-5" data-title="IDS" data-description="Rome (Italy)">IDS</a>
-                        <a class="point-selector" href="#point-6" data-title="Domotex" data-description="Berlin (Germany)">Domotex</a>
-                        <a class="point-selector" href="#point-7" data-title="Mosbuild" data-description="Moscow (Russia)">Mosbuild</a>
+                <div id="list" class="row">
+                    <div class="col list">
+                        <a class="point-selector" href="#point-1" data-title="EBACE" data-place="Madrid (Spain)">EBACE</a>
+                        <a class="point-selector" href="#point-9" data-position="right" data-title="NBAA" data-place="Las Vegas (USA)">NBAA</a>
+                        <a class="point-selector" href="#point-3" data-title="Medica" data-place="London (UK)">Medica</a>
+                        <a class="point-selector" href="#point-4" data-title="Orgatec" data-place="Warsaw (Poland)">Orgatec</a>
+                        <a class="point-selector" href="#point-5" data-title="IDS" data-place="Rome (Italy)">IDS</a>
+                        <a class="point-selector" href="#point-6" data-title="Domotex" data-place="Berlin (Germany)">Domotex</a>
+                        <a class="point-selector" href="#point-7" data-title="Mosbuild" data-place="Moscow (Russia)">Mosbuild</a>
                     </div>
-                    <div class="col-md-4 list">
-                        <a class="point-selector" href="#point-1" data-title="EBACE" data-description="Madrid (Spain)">EBACE</a>
-                        <a class="point-selector" href="#point-9" data-position="right" data-title="NBAA" data-description="Las Vegas (USA)">NBAA</a>
-                        <a class="point-selector" href="#point-3" data-title="Medica" data-description="London (UK)">Medica</a>
-                        <a class="point-selector" href="#point-4" data-title="Orgatec" data-description="Warsaw (Poland)">Orgatec</a>
-                        <a class="point-selector" href="#point-5" data-title="IDS" data-description="Rome (Italy)">IDS</a>
-                        <a class="point-selector" href="#point-6" data-title="Domotex" data-description="Berlin (Germany)">Domotex</a>
-                        <a class="point-selector" href="#point-7" data-title="Mosbuild" data-description="Moscow (Russia)">Mosbuild</a>
+                    <div class="col list">
+                        <a class="point-selector" href="#point-1" data-title="EBACE" data-place="Madrid (Spain)">EBACE</a>
+                        <a class="point-selector" href="#point-9" data-position="right" data-title="NBAA" data-place="Las Vegas (USA)">NBAA</a>
+                        <a class="point-selector" href="#point-3" data-title="Medica" data-place="London (UK)">Medica</a>
+                        <a class="point-selector" href="#point-4" data-title="Orgatec" data-place="Warsaw (Poland)">Orgatec</a>
+                        <a class="point-selector" href="#point-5" data-title="IDS" data-place="Rome (Italy)">IDS</a>
+                        <a class="point-selector" href="#point-6" data-title="Domotex" data-place="Berlin (Germany)">Domotex</a>
+                        <a class="point-selector" href="#point-7" data-title="Mosbuild" data-place="Moscow (Russia)">Mosbuild</a>
                     </div>
-                    <div class="col-md-4 list">
-                        <a class="point-selector" href="#point-7" data-title="Mosbuild" data-description="Moscow (Russia)">Mosbuild</a>
-                        <a class="point-selector" href="#point-8" data-title="BAU" data-description="Tokyo (Japan)">BAU</a>
-                        <a class="point-selector" href="#point-2" data-title="Paris Air Show" data-description="Paris (France)">Paris Air Show</a>
-                        <a class="point-selector" href="#point-10" data-title="Cersaie" data-description="New York (USA)">Cersaie</a>
-                        <a class="point-selector" href="#point-11" data-position="right" data-title="ISH" data-description="Los Angeles (USA)">ISH</a>
+                    <div class="col list">
+                        <a class="point-selector" href="#point-7" data-title="Mosbuild" data-place="Moscow (Russia)">Mosbuild</a>
+                        <a class="point-selector" href="#point-8" data-title="BAU" data-place="Tokyo (Japan)">BAU</a>
+                        <a class="point-selector" href="#point-2" data-title="Paris Air Show" data-place="Paris (France)">Paris Air Show</a>
+                        <a class="point-selector" href="#point-10" data-title="Cersaie" data-place="New York (USA)">Cersaie</a>
+                        <a class="point-selector" href="#point-11" data-position="right" data-title="ISH" data-place="Los Angeles (USA)">ISH</a>
                     </div>
                 </div>
             </div>

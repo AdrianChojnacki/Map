@@ -2,19 +2,19 @@
 
     /*----------------------------------------------------------------------------------------------------------- MAP */
 
-    #map-tooltip {
+    #tooltip {
         width: 160px;
     }
 
-    #map-tooltip.active {
+    #tooltip.active {
         font-size: 14px;
     }
 
-    #map-tooltip .title {
+    #tooltip .title {
         padding-bottom: 2px;
     }
 
-    #map-tooltip .desc {
+    #tooltip .place {
         padding-top: 2px;
     }
 

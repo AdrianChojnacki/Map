@@ -1,10 +1,12 @@
+//---------------------------------------------------------------------------------------------------------- MOUSEOVER -
+
 $(".point-selector").on("mouseover", function(e){
 
     e.preventDefault();
 
     let pointSelector = $(this);
 
-    //---------------------------------------------------------------------------------------------------------- POINT -
+    //------------------------------------------------------------------------------------------------ POINT -
 
     let activePoint = $("#points .active");
     let pointId = pointSelector.attr("href");
@@ -13,64 +15,62 @@ $(".point-selector").on("mouseover", function(e){
     let pointHeight = Math.round(point[0].getBoundingClientRect().height);
     let pointWidth = Math.round(point[0].getBoundingClientRect().width);
 
-    //------------------------------------------------------------------------------------------- SHOW POINT -
+    //--------------------------------------------------------------------------------- SHOW POINT -
 
     activePoint.removeClass("active");
     point.addClass("active");
 
-    //-------------------------------------------------------------------------------------------------------- TOOLTIP -
+    //---------------------------------------------------------------------------------------------- TOOLTIP -
 
-    let tooltip = $("#map-tooltip");
+    let tooltip = $("#tooltip");
     let tooltipTitle = pointSelector.attr("data-title");
-    let tooltipDescription = pointSelector.attr("data-description");
+    let tooltipPlace = pointSelector.attr("data-place");
 
-    //--------------------------------------------------------------------------------------------- ADD DATA -
+    //----------------------------------------------------------------------------------- ADD DATA -
 
     tooltip.find(".title").html(tooltipTitle);
-    tooltip.find(".desc").html(tooltipDescription);
+    tooltip.find(".place").html(tooltipPlace);
 
-    //--------------------------------------------------------------------------------------------- POSITION -
+    //----------------------------------------------------------------------------------- POSITION -
 
     let tooltipWidth = tooltip.width();
     let tooltipHeight = tooltip.height();
     let tooltipTop = pointPosition.top - tooltipHeight / 2 + pointHeight / 2;
     let tooltipLeft;
-    let title =  $("#map-tooltip .title");
-    let desc = $("#map-tooltip .desc");
+    let title =  $("#tooltip .title");
+    let place = $("#tooltip .place");
+
     if (pointSelector.attr("data-position")==="right") {
         tooltipLeft = pointPosition.left + pointWidth + 15;
         title.addClass("right");
-        desc.addClass("right");
+        place.addClass("right");
     } else {
         tooltipLeft = pointPosition.left - tooltipWidth - 15;
         title.removeClass("right");
-        desc.removeClass("right");
+        place.removeClass("right");
     }
 
-    //-------------------------------------------------------------------------------------------------- CSS -
+    //---------------------------------------------------------------------------------------- CSS -
 
-    tooltip.css( {top: tooltipTop, left: tooltipLeft } );
+    tooltip.css( {"top": tooltipTop, "left": tooltipLeft } );
     tooltip.addClass("active");
 
-    //-------------------------------------------------------------------------------------------------------- CONTENT -
+    //---------------------------------------------------------------------------------------------- CONTENT -
 
     $("#header").addClass("hide");
-
     $("#content").addClass("active");
-
-    $("#content a").removeClass("selected");
+    $("#content .point-selector").removeClass("selected");
     $(this).addClass("selected");
 
 });
 
-$(".list").on("mouseleave", function() {
+//--------------------------------------------------------------------------------------------------------- MOUSELEAVE -
+
+$("#list").on("mouseleave", function() {
 
     $("#header").removeClass("hide");
-
     $("#points .active").removeClass("active");
-
-    $("#map-tooltip").removeClass("active");
-
+    $("#tooltip").removeClass("active");
     $("#content").removeClass("active");
 
 });
