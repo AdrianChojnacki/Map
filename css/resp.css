@@ -1,4 +1,4 @@
-@media screen and (max-width: 1512px) {
+@media (max-width: 1512px) {
 
     /*----------------------------------------------------------------------------------------------------------- MAP */
 
@@ -47,7 +47,7 @@
 
 }
 
-@media screen and (max-width: 1248px) {
+@media (max-width: 1248px) {
 
     .hide-1248px {
         display: none;
@@ -71,7 +71,7 @@
 
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
 
     /*---------------------------------------------------------------------------------------------------- NAVIGATION */
 
@@ -81,13 +81,19 @@
 
     /*----------------------------------------------------------------------------------------------------------- MAP */
 
-    #map img, #map #points {
+    #map img, #points {
+        position: fixed;
         top: -98px;
         left: -568px;
         width: 300%;
         height: 100%;
         min-width: 300%;
-        max-height: 100%;
+        min-height: 100%;
+    }
+
+    #tooltip {
+        width: 210px;
+        font-size: 20px !important;
     }
 
     /*------------------------------------------------------------------------------------------------------- CONTENT */
@@ -127,7 +133,7 @@
 
     #content .list a {
         top: 0;
-        font-size: 26px;
+        font-size: 26px !important;
     }
 
     #content .description {
@@ -136,11 +142,11 @@
 
     #content .description h2 {
         margin-bottom: 18px;
-        font-size: 28px;
+        font-size: 28px !important;
     }
 
     #content .description p {
-        font-size: 20px;
+        font-size: 20px !important;
     }
 
 }

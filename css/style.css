@@ -47,7 +47,7 @@ a:hover {
     position: absolute;
     top: 4.75%;
     left: 2.55%;
-    z-index: 10;
+    z-index: 3;
 }
 
 #navigation {
@@ -58,7 +58,7 @@ a:hover {
     margin: 0;
     padding: 0 6.4%;
     font-family: "GothamBookRegular", sans-serif;
-    z-index: 10;
+    z-index: 3;
 }
 
 #navigation .nav-flex {
@@ -79,11 +79,8 @@ a:hover {
 
 /*--------------------------------------------------------------------------------------------------------------- MAP */
 
-#map {
-    position: relative;
-}
-
-#map img, #map #points {
+#map img, #points {
+    position: fixed;
     width: 100%;
     height: 100%;
     max-width: 100%;
@@ -92,12 +89,10 @@ a:hover {
 }
 
 #map img {
-    position: fixed;
     z-index: 1;
 }
 
-#map #points {
-    position: fixed;
+#points {
     z-index: 2;
 }
 
@@ -143,7 +138,7 @@ a:hover {
     background: #fff;
 }
 
-a, .point, #tooltip, #header { /*----------------------------------------------- "#header" from CONTENT */
+a, .point, #tooltip, #header, #content { /*------------------------------- "#header, #content" from CONTENT */
     transition: all 300ms ease;
 }
 
@@ -154,7 +149,7 @@ a, .point, #tooltip, #header { /*-----------------------------------------------
     top: 33%;
     left: 7.3%;
     font-family: "GothamMedium", sans-serif;
-    z-index: 10;
+    z-index: 3;
 }
 
 #header h1 {
@@ -174,7 +169,11 @@ a, .point, #tooltip, #header { /*-----------------------------------------------
     margin: 0;
     padding: 0 6.4%;
     font-family: "GothamBookRegular", sans-serif;
-    z-index: 10;
+    z-index: 3;
+}
+
+#content.click {
+    transform: translateY(55%);
 }
 
 #content .list, #content .description {
@@ -206,6 +205,10 @@ a, .point, #tooltip, #header { /*-----------------------------------------------
     height: 100%;
     padding: 47px 72px 51px 50px;
     border: 3px solid #fff;
+}
+
+#content .description.hide {
+    opacity: 0;
 }
 
 #content .description h2 {
