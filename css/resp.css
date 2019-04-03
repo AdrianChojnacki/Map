@@ -127,10 +127,6 @@
         flex-direction: row;
     }
 
-    #content .list, #content .description {
-        height: 30%;
-    }
-
     #content .list a {
         top: 0;
         font-size: 26px !important;
