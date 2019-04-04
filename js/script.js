@@ -1,6 +1,12 @@
 $(document).ready(function(){
 
-    $(window).on("resize", function(){location.reload();}); //--------- RELOAD -
+    //----------------------------------------------------------------- RELOAD -
+
+    $(window).on("resize", function() {
+        setTimeout(function () {
+            location.reload();
+            }, 0);
+    });
 
     if ($(window).width() > 768) { //------------------------------------------------------------------------- DESKTOP -
 
@@ -116,7 +122,9 @@ $(document).ready(function(){
             activePoint.removeClass("active");
             point.addClass("active");
 
-            pointPosition = point.position(); //---------------- ACTUALISATION -
+            //----------------------------------- POINT POSITION ACTUALISATION -
+
+            pointPosition = point.position();
 
             //---------------------------------------------------------------------------- TOOLTIP -
 
