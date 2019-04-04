@@ -77,6 +77,15 @@ a:hover {
     margin-right: 15px;
 }
 
+#navigation .dropdown-menu .dropdown-item {
+    font-size: 12px;
+}
+
+#navigation .dropdown-menu .dropdown-item:hover {
+    color: #fff;
+    background-color: #e25a5f;;
+}
+
 /*--------------------------------------------------------------------------------------------------------------- MAP */
 
 #map img, #points {
