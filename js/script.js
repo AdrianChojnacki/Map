@@ -63,7 +63,7 @@ $(document).ready(function(){
 
             //---------------------------------------------------------------------- CSS -
 
-            tooltip.css( {"top": tooltipTop, "left": tooltipLeft } );
+            tooltip.css( {"top": tooltipTop + "px", "left": tooltipLeft + "px"} );
             tooltip.addClass("active");
 
             //---------------------------------------------------------------------------- CONTENT -
@@ -96,8 +96,8 @@ $(document).ready(function(){
 
             //---------------------------------------------------------------- RESET MAP -
 
-            $("#map img").css( {"left": "-568px"} );
-            $("#points").css( {"left": "-568px"} );
+            $("#map img").css( {"transform": "translateX(0)"} );
+            $("#points").css( {"transform": "translateX(0)"} );
 
             //------------------------------------------------------------------------------ POINT -
 
@@ -110,12 +110,10 @@ $(document).ready(function(){
 
             //-------------------------------------------------------------------------------- MAP -
 
-            let mapPosition = $("#map img").position();
+            let theFormula = screen.width / 2 - pointPosition.left;
 
-            const theFormula = mapPosition.left - pointPosition.left + screen.width / 2;
-
-            $("#map img").css( {"left": theFormula + "px"} );
-            $("#points").css( {"left": theFormula + "px"} );
+            $("#map img").css( {"transform": "translateX(" + theFormula + "px)"} );
+            $("#points").css( {"transform": "translateX(" + theFormula + "px)"} );
 
             //--------------------------------------------------------------- SHOW POINT -
 
@@ -168,8 +166,8 @@ $(document).ready(function(){
 
             //-------------------------------------------------------------------------------- MAP -
 
-            $("#map img").css( {"left": "-568px"} );
-            $("#points").css( {"left": "-568px"} );
+            $("#map img").css( {"transform": "translateX(0)"} );
+            $("#points").css( {"transform": "translateX(0)"} );
 
             //---------------------------------------------------------------------------- CONTENT -
 
