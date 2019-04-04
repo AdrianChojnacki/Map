@@ -18,6 +18,11 @@
     src: url("../fonts/NimbusSansDOT-Bold.otf");
 }
 
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
 body {
     color: #fff;
     background-color: #9d0a0f;
@@ -144,7 +149,9 @@ a:hover {
     background: #fff;
 }
 
-a, .point, #tooltip, #header, #content { /*------------------------------- "#header, #content" from CONTENT */
+/*------------------------------------------------- "#header, #content, #content-extra-small" from CONTENT */
+
+a, .point, #tooltip, #header, #content, #content-extra-small {
     transition: all 300ms ease;
 }
 
@@ -167,18 +174,27 @@ a, .point, #tooltip, #header, #content { /*------------------------------- "#hea
     opacity: 0;
 }
 
-#content {
+#content, #content-extra-small {
     position: absolute;
-    bottom: 9.5%;
     width: 100%;
-    height: 25%;
     margin: 0;
     padding: 0 6.4%;
     font-family: "GothamBookRegular", sans-serif;
     z-index: 3;
 }
 
-#content.click {
+#content {
+    bottom: 9.5%;
+    height: 25%;
+}
+
+#content-extra-small {
+    bottom: 15%;
+    display: none;
+    height: auto;
+}
+
+#content.click, #content-extra-small.click {
     transform: translateY(55%);
 }
 
@@ -186,12 +202,12 @@ a, .point, #tooltip, #header, #content { /*------------------------------- "#hea
     height: 231px;
 }
 
-#content .list {
+#content .list, #content-extra-small .list {
     flex: 0 0 20%;
     padding: 0 96px 0 0;
 }
 
-#content .list a {
+#content .list a, #content-extra-small .list a {
     position: relative;
     top: -9px;
     display: block;
@@ -199,11 +215,11 @@ a, .point, #tooltip, #header, #content { /*------------------------------- "#hea
     line-height: 1.8;
 }
 
-#content.active .point-selector {
+#content.active .point-selector, #content-extra-small.active .point-selector {
     color: #5e0609;
 }
 
-#content.active .point-selector.selected {
+#content.active .point-selector.selected, #content-extra-small.active .point-selector.selected {
     color: #fff;
 }
 

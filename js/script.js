@@ -82,10 +82,6 @@ $(document).ready(function(){
 
     } else { //------------------------------------------------------------------------------------------------ MOBILE -
 
-        //-------------------------------------------------- DISABLE SCROLLING -
-
-        $("html, body").css({"overflow": "hidden", "height": "100%"});
-
         //-------------------------------------------------------------------------------------------- CLICK -
 
         $(".point-selector").on("click", function(e){
@@ -150,6 +146,8 @@ $(document).ready(function(){
             $("#header").addClass("hide");
             $("#content").addClass("active");
             $("#content").addClass("click");
+            $("#content-extra-small").addClass("active");
+            $("#content-extra-small").addClass("click");
             $(".point-selector").removeClass("selected");
             $(this).addClass("selected");
             $(".description").addClass("hide");
@@ -160,15 +158,21 @@ $(document).ready(function(){
 
         $("#map").on("click", function(){
 
+            //-------------------------------------------------------------------------------- MAP -
+
+            $("#map img").css( {"left": "-568px"} );
+            $("#points").css( {"left": "-568px"} );
+
+            //---------------------------------------------------------------------------- CONTENT -
+
             $("#header").removeClass("hide");
             $("#points .active").removeClass("active");
             $("#tooltip").removeClass("active");
             $("#content").removeClass("active");
             $("#content").removeClass("click");
+            $("#content-extra-small").removeClass("active");
+            $("#content-extra-small").removeClass("click");
             $(".description").removeClass("hide");
-
-            $("#map img").css( {"left": "-568px"} );
-            $("#points").css( {"left": "-568px"} );
 
         });
 
