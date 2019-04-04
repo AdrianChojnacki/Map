@@ -77,6 +77,12 @@ a:hover {
     padding-right: 27px;
 }
 
+#navigation i {
+    position: relative;
+    top: 1px;
+    margin-right: 1em;
+}
+
 /*--------------------------------------------------------------------------------------------------------------- MAP */
 
 #map img, #points {
