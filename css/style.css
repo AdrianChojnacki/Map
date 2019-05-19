@@ -67,10 +67,6 @@ a:hover {
     font-size: 12px;
 }
 
-#navigation .nav-flex .nav-flex-item.extra-padding {
-    padding-right: 26px;
-}
-
 #navigation i {
     position: relative;
     top: 1px;
